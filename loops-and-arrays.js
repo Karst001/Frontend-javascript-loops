@@ -13,6 +13,10 @@
 
 const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 
+for (let i = 0; i < meetingTimes.length; i++) {
+    console.log("Vergadering om " + meetingTimes[i]);
+}
+
 
 // ==========================================
 // Opdracht 2. In tegenstelling tot Bob, werken de andere medewerkers van Loop-it Solutions wél hard.
@@ -27,6 +31,11 @@ const meetingTimes = ['09:00', '10:30', '14:00', '15:30', '17:00'];
 
 const salaries = [3200, 2350, 2800, 3500, 2800];
 
+for (let i = 0; i < salaries.length; i++) {
+    salaries[i] = salaries[i] * 1.05;
+}
+console.log(salaries);
+
 
 // ==========================================
 // Opdracht 3. Eén van Bob's taken is medewerkers feliciteren met hun "zoveelste" verjaardag.
@@ -38,6 +47,11 @@ const salaries = [3200, 2350, 2800, 3500, 2800];
 // ==========================================
 
 const birthYears = [1995, 1997, 1990, 2003, 1982];
+
+const currentYear = new Date(); //gets today's date
+for (let i = 0; i < birthYears.length; i++) {
+    console.log("Van harte gefeliciteerd met je verjaardag, je bent vandaag " + (currentYear.getFullYear() - birthYears[i]) + " geworden!");
+}
 
 
 // ==========================================
@@ -51,6 +65,15 @@ const birthYears = [1995, 1997, 1990, 2003, 1982];
 // ==========================================
 
 const leaveHours = [6, 9, 2, 7, 3];
+
+for (let i = 0; i < leaveHours.length; i++) {
+    if (leaveHours[i] %2 === 0) {   //even number
+        leaveHours[i] = leaveHours[i] * 2;
+    } else {    //odd number
+        leaveHours[i] = leaveHours[i] * 0.5;
+    }
+}
+console.log(leaveHours);
 
 
 // ==========================================
@@ -68,5 +91,11 @@ const leaveHours = [6, 9, 2, 7, 3];
 // ==========================================
 
 const productionCodes = [" abC123  ", "  DEF456", "ghi789  ", "JKL012"];
-
+let convertedProductionCodes = null;
+for (let i = 0; i < productionCodes.length; i++) {
+    convertedProductionCodes = productionCodes[i].trim();
+    convertedProductionCodes = convertedProductionCodes.toUpperCase();
+    productionCodes[i] = convertedProductionCodes;
+}
+console.log(productionCodes);
 

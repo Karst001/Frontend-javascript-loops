@@ -9,6 +9,10 @@
 
 // Tip: je kunt de .repeat() methode gebruiken om een karakter een n aantal keer te herhalen... Dit heb je nog niet geleerd, maar bekijk hiervoor dit MDN-artikel eens: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
 // ==========================================
+const printCharacter = "*";
+for (let i = 1; i < 6; i++) {
+    console.log(printCharacter.repeat(i));
+}
 
 
 // ==========================================
@@ -20,6 +24,10 @@
 // loop...
 // klaar!
 // ==========================================
+for (let i = 0; i < 4; i++) {
+    console.log("loop...");
+}
+console.log("klaar!");
 
 
 // ==========================================
@@ -36,6 +44,16 @@
 // 'INV-0008'
 
 // ==========================================
+for (let i = 1; i < 9; i++) {
+    console.log("INV-000" + i)
+}
+
+//of
+for (let i = 0; i < 10; i++)
+{
+    console.log("'INV-"+String(i+1).padStart(4, '0')+"'");
+}
+
 
 // ==========================================
 // Opdracht 4. Schrijf een for-loop die van 9 tot en met 18 loopt en de uren logt.
@@ -55,6 +73,28 @@
 // 17:00 Bijna klaar...
 // 18:00
 // ==========================================
+for (let i = 9; i < 19; i++) {
+    switch(i) {
+        case 9:
+        case 10:
+        case 11:
+        case 13:
+        case 14:
+        case 15:
+        case 16:
+        case 18:
+            console.log(i + ":00");
+            break;
+
+        case 12:
+            console.log(i + ":00 Lunchpauze");
+            break;
+
+        case 17:
+            console.log(i + ":00 Bijna klaar");
+            break;
+    }
+}
 
 
 // ==========================================
@@ -72,7 +112,28 @@
 // >> 8
 // >> 9
 // ==========================================
+for (let i = 0; i < 10; i++) {
+    switch (i) {
+        case 0:
+        case 1:
+        case 2:
+            console.log(i);
+            break;
 
+        case 3:
+        case 4:
+        case 5:
+            console.log("> " + i);
+            break;
+
+        case 6:
+        case 7:
+        case 8:
+        case 9:
+            console.log(">> " + i);
+            break;
+    }
+}
 
 // ==========================================
 // Opdracht 6 (BONUS). Schrijf een for-loop die van 0 tot 100 loopt en de getallen print.
@@ -111,6 +172,18 @@
 // FizzBuzz
 // etc.
 // ==========================================
-
+for (let i = 1; i < 101; i++) {
+    //first check if both 3 and 5 are matched because if 3 is matched, the combination of 3 and 5 is not being tested anymore
+    if (i % 3 === 0 && i % 5 === 0) {
+        console.log("FizzBuzz");
+    } else if (i % 3 === 0)
+    {
+        console.log("Fizz");
+    } else if (i % 5 === 0) {
+        console.log("Buzz");
+    } else {
+        console.log(i);
+    }
+}
 
 
